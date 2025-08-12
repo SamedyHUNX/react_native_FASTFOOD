@@ -11,7 +11,7 @@ const TabBarIcon = ({ focused, icon, title }: TabBarIconProps) => {
     <View className="tab-icon">
       <Image
         source={icon}
-        className="size-7"
+        className="size-7 text-black"
         resizeMode="contain"
         tintColor={focused ? "#FE8C00" : "5D5F6D"}
       />
@@ -60,7 +60,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon title="Home" icon={images.home} focused={false} />
+            <TabBarIcon title="Home" icon={images.home} focused={focused} />
           ),
         }}
       />
@@ -69,7 +69,7 @@ export default function TabLayout() {
         options={{
           title: "Search",
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon title="Search" icon={images.search} focused={false} />
+            <TabBarIcon title="Search" icon={images.search} focused={focused} />
           ),
         }}
       />
@@ -78,7 +78,7 @@ export default function TabLayout() {
         options={{
           title: "Cart",
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon title="Cart" icon={images.bag} focused={false} />
+            <TabBarIcon title="Cart" icon={images.bag} focused={focused} />
           ),
         }}
       />
@@ -87,7 +87,11 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon title="Profile" icon={images.person} focused={false} />
+            <TabBarIcon
+              title="Profile"
+              icon={images.person}
+              focused={focused}
+            />
           ),
         }}
       />
